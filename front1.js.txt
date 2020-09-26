@@ -1,0 +1,225 @@
+var c={
+    Cars:['Ford','Honda','BMW'],
+    Clothing:['Shirts','Pants','Blazer'],
+    Food:['Biryani','Pizzas','Burgers']
+}
+var main=document.getElementById('main_menu');
+var sub=document.getElementById('sub _menu');
+var sub1=document.getElementById('sub _menu1');
+main.addEventListener('change',function(){
+    var selected_option=c[this.value];
+    while(sub.options.length>1){
+        sub.options.remove(1);
+    }
+    while(sub1.options.length>1){
+        sub1.options.remove(1);
+    }
+    
+    Array.from(selected_option).forEach(function(el){
+        let option=new Option(el,el);
+        sub.appendChild(option); 
+    });
+});
+var c1={
+    Ford:['Ford 1','Ford 2'],
+    Honda:['Honda 1','Honda 2'],
+    BMW:['BMW 1','BMW 2'],
+    Shirts:['Shirts 1','Shirts 2'],
+    Pants : ['Pants 1','Pants 2'],
+    Blazer:['Blazer 1','Blazer 2'],
+    Biryani:['Chicken Biryani','Veg Biryani'],
+    Pizzas:['Pizza 1','Pizza 2'],
+    Burgers:['Burger 1','Burger 2']
+}
+
+sub.addEventListener('change',function(){
+ 
+    var selected_option1=c1[this.value];
+    
+    
+    while(sub1.options.length>1){
+        sub1.options.remove(1);
+    }
+    
+    Array.from(selected_option1).forEach(function(el){
+        let option=new Option(el,el);
+        sub1.appendChild(option); 
+    });
+   
+});
+sub1.addEventListener('change',function(){
+ 
+    var selected_option1=c1[this.value];
+    var a=[[]]
+    if(this.value=='Ford 1')
+    {
+     a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 89, "lightblue"],
+        ["February", 40, "lightblue"],
+        ["March", 13, "lightblue"],
+        ["April", 21, "lightblue"]];
+    }
+    else if(this.value=='Ford 2')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 30, "lightblue"],
+        ["February", 10, "lightblue"],
+        ["March", 40, "lightblue"],
+        ["April", 11, "lightblue"]];
+    }
+    else if(this.value=='Honda 1')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 100, "lightblue"],
+        ["February", 60, "lightblue"],
+        ["March", 80, "lightblue"],
+        ["April", 75, "lightblue"]];
+    }
+    else if(this.value=='Honda 2')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 120, "lightblue"],
+        ["February", 100, "lightblue"],
+        ["March", 180, "lightblue"],
+        ["April", 175, "lightblue"]];
+    }
+    else if(this.value=='BMW 1')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 40, "lightblue"],
+        ["February", 10, "lightblue"],
+        ["March", 19, "lightblue"],
+        ["April", 17, "lightblue"]];
+    }
+    else if(this.value=='BMW 2')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 38, "lightblue"],
+        ["February", 10, "lightblue"],
+        ["March", 29, "lightblue"],
+        ["April", 17, "lightblue"]];
+    }
+    else if(this.value=='Shirts 1')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 20000, "lightblue"],
+        ["February", 10000, "lightblue"],
+        ["March", 29000, "lightblue"],
+        ["April", 11000, "lightblue"]];
+    }
+    else if(this.value=='Shirts 2')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 25000, "lightblue"],
+        ["February", 9000, "lightblue"],
+        ["March", 21000, "lightblue"],
+        ["April", 18000, "lightblue"]];
+    }
+    else if(this.value=='Pants 1')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 31000, "lightblue"],
+        ["February", 19000, "lightblue"],
+        ["March", 21000, "lightblue"],
+        ["April", 19000, "lightblue"]];
+    }
+    else if(this.value=='Pants 2')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 30000, "lightblue"],
+        ["February", 20000, "lightblue"],
+        ["March", 23000, "lightblue"],
+        ["April", 17000, "lightblue"]];
+    }
+    else if(this.value=='Blazer 1')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 4000, "lightblue"],
+        ["February", 1000, "lightblue"],
+        ["March", 2300, "lightblue"],
+        ["April", 2700, "lightblue"]];
+    }
+    else if(this.value=='Blazer 2')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 5000, "lightblue"],
+        ["February", 1000, "lightblue"],
+        ["March", 2300, "lightblue"],
+        ["April", 2800, "lightblue"]];
+    }
+    else if(this.value=='Chicken Biryani')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 50000, "lightblue"],
+        ["February", 100000, "lightblue"],
+        ["March", 230000, "lightblue"],
+        ["April", 230078, "lightblue"]];
+    }
+    else if(this.value=='Veg Biryani')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 170000, "lightblue"],
+        ["February", 100000, "lightblue"],
+        ["March", 260000, "lightblue"],
+        ["April", 230078, "lightblue"]];
+    }
+    else if(this.value=='Pizza 1')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 5600, "lightblue"],
+        ["February", 6000, "lightblue"],
+        ["March", 2600, "lightblue"],
+        ["April", 20078, "lightblue"]];
+    }
+    else if(this.value=='Pizza 2')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 1780, "lightblue"],
+        ["February", 1600, "lightblue"],
+        ["March", 2600, "lightblue"],
+        ["April", 2078, "lightblue"]];
+    }
+    else if(this.value=='Burger 1')
+    {
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 6800, "lightblue"],
+        ["February", 7200, "lightblue"],
+        ["March", 8900, "lightblue"],
+        ["April", 9078, "lightblue"]];
+    }
+    else{
+        a=[   ["Months", "sales per month", { role: "style" } ],
+        ["January", 8000, "lightblue"],
+        ["February", 9000, "lightblue"],
+        ["March", 7500, "lightblue"],
+        ["April", 9058, "lightblue"]];
+    }
+    
+
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable(a);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        width: 1200,
+        height: 400,
+        bar: {groupWidth: "65%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+  }
+  }
+ 
+    
+   
+);
